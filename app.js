@@ -16,7 +16,7 @@ app.use(require("./router/auth"));
 
 const PORT = process.env.PORT;
 
-const middleware = (req,res,next)=>{
+/* const middleware = (req,res,next)=>{
     console.log(`Hello my middleware`);
     next();
 }
@@ -33,7 +33,7 @@ app.get("/signin", (req,res)=>{
 });
 app.get("/signup", (req,res)=>{
     res.send(`Hello registration world from server`);
-});
+}); */
 
 if(process.env.NODE_ENV == "production"){
     app.use(express.static("client/build"));
